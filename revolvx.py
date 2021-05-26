@@ -9,7 +9,7 @@ from xml.etree import ElementTree
 
 from selenium import webdriver
 from selenium.common.exceptions import (ElementNotInteractableException,
-                                        NoSuchElementException)
+                                        NoSuchElementException, WebDriverException)
 from selenium.webdriver.common.keys import Keys
 
 extensions = [
@@ -18,18 +18,23 @@ extensions = [
 ]
 
 sites = ElementTree.parse('sites.xml').getroot()
-with open("ptc_site.json") as file:
+with open("configs.json") as file:
     config = json.load(file)
 
 options = webdriver.FirefoxOptions()
 options.headless = True
 
+geckodriver = None
 if platform.system() == "Linux":
     geckodriver = path.abspath("geckodriver")
 elif platform == "Windows":
     geckodriver = path.abspath("geckodriver.exe")
 else:
-    print("configure geckodriver on your own. configure this.")
+    try:
+        webdriver.Firefox(options=options)
+    except WebDriverException:
+        print("geckodriver not found your platform. configure this.")
+        exit()
 
 
 class RevolvX(Thread):
@@ -44,7 +49,7 @@ class RevolvX(Thread):
     def run(self):
         self.install_extension()
         if not self.login():
-            print("login failed")
+            print(f"login failed: {self.username}")
             return self.firefox.close()
 
         self.collect_package()
