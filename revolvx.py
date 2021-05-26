@@ -1,4 +1,5 @@
 from os import path
+import platform
 from random import choice
 from threading import Thread
 from time import sleep
@@ -22,7 +23,13 @@ with open("ptc_site.json") as file:
 
 options = webdriver.FirefoxOptions()
 options.headless = True
-geckodriver = path.abspath("geckodriver")
+
+if platform.system() == "Linux":
+    geckodriver = path.abspath("geckodriver")
+elif platform == "Windows":
+    geckodriver = path.abspath("geckodriver.exe")
+else:
+    print("configure geckodriver on your own. configure this.")
 
 
 class RevolvX(Thread):
