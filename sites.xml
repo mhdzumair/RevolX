@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sites>
+    <site name="vuexybux">
+        <username>mhdzumair</username>
+        <password>Password</password>
+    </site>
+    <site name="vuexybux">
+        <username>mhdzumair@gmail.com</username>
+        <password>Password123</password>
+    </site>
+</sites>

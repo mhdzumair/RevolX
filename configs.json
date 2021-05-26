@@ -1,0 +1,12 @@
+{
+  "vuexybux": {
+    "login": "https://vuexybux.com/login",
+    "username_id": "user_name",
+    "password_id": "user_password",
+    "package": ".btn.btn-outline-white.text-white.waves-effect.waves-light",
+    "banner": ".col-lg-6.col-sm-12.text-center",
+    "ads": ".item-name a",
+    "success": "https://vuexybux.com/account",
+    "bonus": "Dailybonus"
+  }
+}
