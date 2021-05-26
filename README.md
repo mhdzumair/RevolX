@@ -7,6 +7,15 @@ Multi Threaded Headless Firefox Automation tool for Hack PTC sites.
 - [vuexybux](https://vuexybux.com/)
 
 
+## Requirement
+
+- Install [python 3.7+](https://www.python.org/downloads/)
+- [Firefox Browser](https://www.mozilla.org/en-US/firefox/new/)
+- Install Firefox [geckodriver](https://github.com/mozilla/geckodriver/releases) for your platform. [ Linux, Windows driver already added here.]
+- [Resolvo Pro](https://github.com/mhdzumair/ResolvoPro.git)
+- [Ads Fucker](https://github.com/mhdzumair/ads_fucker) [ Already added Here. ]
+
+
 ## Usage
 
 ### 1. Open sites.xml file and configure your accounts.
