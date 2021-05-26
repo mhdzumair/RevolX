@@ -4,7 +4,7 @@ Multi Threaded Headless Firefox Automation tool for Hack PTC sites.
 
 ## Supported Sites
 
-- vuexybux 
+- [vuexybux](https://vuexybux.com/)
 
 
 ## Usage
