@@ -104,8 +104,8 @@ class RevolvX(Thread):
 
         current_index = self.firefox.window_handles.index(self.firefox.current_window_handle)
         try:
-        self.firefox.switch_to.window(self.firefox.window_handles[current_index + 1])
-        self.firefox.close()
+            self.firefox.switch_to.window(self.firefox.window_handles[current_index + 1])
+            self.firefox.close()
         except IndexError:
             pass
         self.firefox.switch_to.window(self.firefox.window_handles[current_index])
