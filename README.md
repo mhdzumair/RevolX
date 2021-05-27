@@ -59,3 +59,17 @@ python revolvx.py
 ``options.headless = False`` in revolx.py file
 
 - Put a star to this repo if you like this.  :hugs:
+
+- Setup Socks5 Proxy
+
+```python
+profile = webdriver.FirefoxProfile()
+profile.set_preference('network.proxy.type', 1)
+profile.set_preference('network.proxy.socks', "127.0.0.1")
+profile.set_preference('network.proxy.socks_port', 1080)
+profile.set_preference("network.proxy.socks_version", 5)
+profile.set_preference("network.proxy.socks_remote_dns", True)
+
+# setup driver firefox profile. 
+webdriver.Firefox(executable_path=geckodriver, options=options, firefox_profile=profile)
+```
