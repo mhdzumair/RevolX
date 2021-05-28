@@ -47,6 +47,9 @@ git clone https://github.com/mhdzumair/ResolvoPro.git
 cd ResolvoPro/
 pip install -r requirments.txt
 python fastapp.py
+
+# if you have issue with opencv in linux
+sudo apt install python3-opencv
 ```
 
 ### 4. Run RevolvX
